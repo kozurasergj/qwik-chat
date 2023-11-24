@@ -1,0 +1,64 @@
+.unityImage:before {
+    content: "";
+    position: absolute;
+    font-size: 3em;
+    color: #fff;
+    background-color: transparent;
+    transform: scale(0);
+
+    border-radius: 50%;
+    width: 30%;
+    height: 100%;
+    animation: pulse 2s linear infinite;
+}
+.unityImage {
+    filter: url(#wavy);
+}
+
+/* .unityImage:is(.is-active) {
+    transition: 1.5s;
+    -webkit-box-shadow: 0px -10px 17px -1px rgba(147, 99, 253, 1);
+    -moz-box-shadow: 0px -10px 17px -1px rgba(147, 99, 253, 1);
+    box-shadow: 0px -10px 17px -1px rgba(147, 99, 253, 1);
+   
+}
+
+.unityImage:not(.is-active)::before {
+    background-color: rgba(147, 99, 253, 1);
+    animation: pulse 2s linear infinite;
+
+} */
+
+@media screen and (max-width:576px) {
+    .unityImage::before {
+        left: 130px;
+        bottom: 0px;
+    }
+}
+@media screen and (min-width:576px) {
+    .unityImage::before {
+        left: 175px;
+        bottom: 0px;
+    }
+}
+
+/* animation */
+@keyframes pulse {
+    0% {
+        transform: scale(0.1);
+        opacity: 1;
+    }
+
+    70% {
+        transform: scale(0.4)
+    }
+
+    100% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+}
+
+.language__switcher {
+    transition: 1.5s;
+}
